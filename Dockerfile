@@ -8,6 +8,8 @@ RUN npm run build
 
 # RUN PHASE
 FROM nginx:alpine
+# for deployed container, port 80 is automatically exposed if ran locally
+EXPOSE 80
 # set working directory to the one required by nginx
 WORKDIR /usr/share/nginx/html
 # Remove default nginx static assets
